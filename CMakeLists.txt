@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.29)
+project(loop-convert)
 set(LLVM_DIR "/usr/lib/llvm-18")
 
 set(CLANG_SEARCH_PATHS

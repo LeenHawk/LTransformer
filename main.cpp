@@ -119,7 +119,8 @@ public:
                         paramNames.pop_back(); // Remove the trailing comma and space
                     }
 
-                    std::string newFunction = "void " + newFunctionName + "(" + paramList + ") {\n" + innermostLoopBody + "}\n";
+                    std::string newFunction = "void " + newFunctionName + "(" + paramList + ") {\n"
+                    + "#pragma HLS INLINE OFF\n" + innermostLoopBody + "}\n";
 
                     // Insert the new function definition at the beginning of the file
                     SourceLocation funcStartLoc = TheRewriter.getSourceMgr().getLocForStartOfFile(

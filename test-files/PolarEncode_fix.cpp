@@ -1,4 +1,5 @@
 void polarencode_innerLoop0(int GP_half_size, int GP_size, int curr_GP_base_addr, int * in) {
+#pragma HLS INLINE OFF
 for (int t = 0; t < GP_half_size; t++){
                 in[curr_GP_base_addr + t] ^= in[curr_GP_base_addr + t + GP_half_size];
             }
