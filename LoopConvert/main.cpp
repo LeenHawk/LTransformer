@@ -13,7 +13,6 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
-#include "clang/AST/AST.h"
 #include "clang/AST/ASTConsumer.h"
 #include "clang/AST/RecursiveASTVisitor.h"
 #include "clang/Frontend/ASTConsumers.h"
@@ -31,8 +30,8 @@ using namespace clang::driver;
 using namespace clang::tooling;
 
 static llvm::cl::OptionCategory ToolingSampleCategory("Tooling Sample");
-static llvm::cl::opt<std::string> OutputFilename("O", llvm::cl::desc("Specify output filename"), llvm::cl::value_desc("filename"),llvm::cl::init("fix.cpp"));
-static llvm::cl::opt<unsigned int> MaxLoopLayerNumber("N", llvm::cl::desc("The biggest number of layer recognized"), llvm::cl::value_desc("MaxLayerNumber"),llvm::cl::init(1));
+static llvm::cl::opt<std::string> OutputFilename("O", llvm::cl::desc("Specify output filename"), llvm::cl::value_desc("filename"),llvm::cl::init("fix.cpp"),llvm::cl::cat(ToolingSampleCategory));
+static llvm::cl::opt<unsigned int> MaxLoopLayerNumber("N", llvm::cl::desc("The biggest number of layer recognized"), llvm::cl::value_desc("MaxLayerNumber"),llvm::cl::init(1),llvm::cl::cat(ToolingSampleCategory));
 
 // By implementing RecursiveASTVisitor, we can specify which AST nodes
 // we're interested in by overriding relevant methods.
