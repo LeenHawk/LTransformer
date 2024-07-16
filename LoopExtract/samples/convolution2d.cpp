@@ -29,13 +29,6 @@ void convolution2d(int A[SIZE],int B[SIZE]) {
 		B[i*NJ+j]=convolution2d_compute(A[(i - 1)*NJ + (j - 1)],A[(i + 0)*NJ + (j - 1)],A[(i + 1)*NJ + (j - 1)],
 		A[(i - 1)*NJ + (j + 0)],A[(i + 0)*NJ + (j + 0)],A[(i + 1)*NJ + (j + 0)],
 		A[(i - 1)*NJ + (j + 1)],A[(i + 0)*NJ + (j + 1)],A[(i + 1)*NJ + (j + 1)]);
-		//B[i*NJ + j] = c11 * A[(i - 1)*NJ + (j - 1)]  +  c12 * A[(i + 0)*NJ + (j - 1)]  +  c13 * A[(i + 1)*NJ + (j - 1)]
-		//		+ c21 * A[(i - 1)*NJ + (j + 0)]  +  c22 * A[(i + 0)*NJ + (j + 0)]  +  c23 * A[(i + 1)*NJ + (j + 0)]
-		//		+ c31 * A[(i - 1)*NJ + (j + 1)]  +  c32 * A[(i + 0)*NJ + (j + 1)]  +  c33 * A[(i + 1)*NJ + (j + 1)];
-
-	// /*For 2x2 filter*/
-	// 	B[i*NJ + j] = c11 * A[(i - 1)*NJ + (j - 1)]  +  c12 * A[(i + 0)*NJ + (j - 1)] 
-	// 			+ c21 * A[(i - 1)*NJ + (j + 0)]  +  c22 * A[(i + 0)*NJ + (j + 0)];
 		}
 	}
 }

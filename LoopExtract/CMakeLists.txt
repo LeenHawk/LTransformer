@@ -1,0 +1,9 @@
+add_executable(loop-extract
+        loop-extract.cpp
+)
+target_link_libraries(loop-extract
+        PRIVATE
+        clangTooling
+        clangBasic
+        clangASTMatchers
+)

@@ -1,0 +1,9 @@
+add_executable(derecursion
+        derecursion.cpp
+)
+target_link_libraries(derecursion
+        PRIVATE
+        clangTooling
+        clangBasic
+        clangASTMatchers
+)

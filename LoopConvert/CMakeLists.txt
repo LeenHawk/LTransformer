@@ -1,9 +1,0 @@
-add_executable(loop-convert
-        main.cpp
-)
-target_link_libraries(loop-convert
-  PRIVATE
-  clangTooling
-  clangBasic
-  clangASTMatchers
-  )
